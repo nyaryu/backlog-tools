@@ -5,5 +5,6 @@ export default defineConfig({
   manifest: {
     name: 'backlog-tools',
     description: 'backlog-tools',
+    permissions: ["storage"],
   },
 });
