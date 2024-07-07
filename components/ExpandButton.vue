@@ -1,12 +1,12 @@
 <script setup lang="ts">
 
-const { t } = useI18n();
+  const { t } = useI18n();
 
-const expandGanttChart = () => {
-  document.querySelectorAll('.gantt-table').forEach((el) => {
-    (el as HTMLElement).removeAttribute('style')
-  });
-};
+  const expandGanttChart = () => {
+    document.querySelectorAll('.gantt-table').forEach((el) => {
+      (el as HTMLElement).removeAttribute('style')
+    });
+  };
 
 </script>
 

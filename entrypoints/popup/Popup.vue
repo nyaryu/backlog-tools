@@ -1,19 +1,20 @@
 <script lang="ts" setup>
-  import {languageStorage} from "@/utils/storage";
-  import {defaultLanguage} from "@/data/language";
-  import {onBeforeMount, ref} from "vue";
+  import { languageStorage } from "@/utils/storage";
+  import { defaultLanguage } from "@/data/language";
+  import { I18nLocales } from "@/data/types";
+  import { onBeforeMount, ref } from "vue";
 
   const { t, locale } = useI18n();
 
-  const language = ref<string>('');
+  const language = ref<I18nLocales>(defaultLanguage);
 
   onBeforeMount(async () => {
     language.value = (await languageStorage.getValue()) ?? defaultLanguage;
   })
 
   const changeLanguage = () => {
-    locale.value = language.value as 'en' | 'ja';
     languageStorage.setValue(language.value);
+    locale.value = language.value;
   };
 
 </script>
