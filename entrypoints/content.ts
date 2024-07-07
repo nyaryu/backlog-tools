@@ -10,6 +10,7 @@ export default defineContentScript({
       append: 'first',
       onMount: (container) => {
         const app = createApp(Content);
+        app.use(i18n)
         app.mount(container);
         return app;
       }

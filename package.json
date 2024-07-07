@@ -2,7 +2,7 @@
   "name": "backlog-tools",
   "description": "manifest.json description",
   "private": true,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "scripts": {
     "dev": "wxt",
@@ -15,9 +15,12 @@
     "postinstall": "wxt prepare"
   },
   "dependencies": {
-    "vue": "^3.4.27"
+    "vue": "^3.4.27",
+    "vue-i18n": "9"
   },
   "devDependencies": {
+    "@intlify/unplugin-vue-i18n": "^1.4.0",
+    "@vitejs/plugin-vue": "^5.0.1",
     "@wxt-dev/module-vue": "^1.0.0",
     "typescript": "^5.4.5",
     "vue-tsc": "^2.0.21",
