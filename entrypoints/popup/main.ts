@@ -2,4 +2,4 @@ import { createApp } from 'vue';
 import './style.css';
 import Popup from './Popup.vue';
 
-createApp(Popup).mount('#app');
+createApp(Popup).use(i18n).mount('#app');

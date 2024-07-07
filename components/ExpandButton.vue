@@ -1,5 +1,7 @@
 <script setup lang="ts">
 
+const { t } = useI18n();
+
 const expandGanttChart = () => {
   document.querySelectorAll('.gantt-table').forEach((el) => {
     (el as HTMLElement).removeAttribute('style')
@@ -10,7 +12,7 @@ const expandGanttChart = () => {
 
 <template>
   <div>
-    <input type="button" @click="expandGanttChart" value="expand" class="expand-button">
+    <input type="button" @click="expandGanttChart" :value="t('expand-button')" class="expand-button">
   </div>
 </template>
 

@@ -1,5 +1,7 @@
 <script setup lang="ts">
 
+const { t } = useI18n();
+
 const collapseGanttChart = () => {
   document.querySelectorAll('.gantt-table').forEach((el) => {
     (el as HTMLElement).style.display = 'none';
@@ -10,7 +12,7 @@ const collapseGanttChart = () => {
 
 <template>
   <div>
-    <input type="button" @click="collapseGanttChart" value="collapse" class="collapse-button">
+    <input type="button" @click="collapseGanttChart" :value="t('collapse-button')" class="collapse-button">
   </div>
 </template>
 
