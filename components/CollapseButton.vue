@@ -1,12 +1,12 @@
 <script setup lang="ts">
 
-const { t } = useI18n();
+  const { t } = useI18n();
 
-const collapseGanttChart = () => {
-  document.querySelectorAll('.gantt-table').forEach((el) => {
-    (el as HTMLElement).style.display = 'none';
-  });
-};
+  const collapseGanttChart = () => {
+    document.querySelectorAll('.gantt-table').forEach((el) => {
+      (el as HTMLElement).style.display = 'none';
+    });
+  };
 
 </script>
 

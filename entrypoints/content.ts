@@ -1,5 +1,5 @@
 import { createApp } from 'vue';
- import Content from "./content/Content.vue";
+import Content from "./content/Content.vue";
 
 export default defineContentScript({
   matches: ['*://*.backlog.com/*'],
